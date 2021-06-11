@@ -1,4 +1,4 @@
-package edu.utd.fse19.data.clean;
+package data.clean;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -107,7 +107,7 @@ public class Linker {
 						final String src = readFile(file.getAbsolutePath(), StandardCharsets.UTF_8);
 						parser.setSource(src.toCharArray());
 						parser.setKind(ASTParser.K_COMPILATION_UNIT);
-						final Map<?, ?> options = JavaCore.getOptions();
+						final Map<String, String> options = JavaCore.getOptions();
 						JavaCore.setComplianceOptions(JavaCore.VERSION_1_7, options);
 						parser.setCompilerOptions(options);
 						final CompilationUnit cu = (CompilationUnit) parser.createAST(null);

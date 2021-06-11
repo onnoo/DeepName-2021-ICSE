@@ -1,4 +1,4 @@
-package edu.utd.fse19.data.clean;
+package data.clean;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.AnnotationTypeDeclaration;
 import org.eclipse.jdt.core.dom.BlockComment;

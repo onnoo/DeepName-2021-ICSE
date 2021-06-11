@@ -1,4 +1,4 @@
-package edu.utd.fse19.data.clean;
+package data.clean;
 
 
 import java.io.PrintWriter;
