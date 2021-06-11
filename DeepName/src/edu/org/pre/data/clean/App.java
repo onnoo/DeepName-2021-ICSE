@@ -50,7 +50,7 @@ public class App {
 			String line;
 			while ((line = br.readLine()) != null) {
 				if (!line.contains("/test/")) {
-					File file = new File(DataCleaner.DATA + File.separator + "data" + File.separator + line);
+					File file = new File(line);
 					try {
 						final ASTParser parser = ASTParser.newParser(AST.JLS8);
 						final String src = readFile(file.getAbsolutePath(), StandardCharsets.UTF_8);

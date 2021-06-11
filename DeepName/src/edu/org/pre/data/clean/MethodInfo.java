@@ -183,28 +183,19 @@ public class MethodInfo {
 	 */
 	public String getEncodedSrc4() {
 		StringBuffer result = new StringBuffer();
-		result.append(" { ");
 		result.append(className);
-		result.append(" } ");
-		result.append(" { ");
-		for (String mate : classMates) {
-			result.append(mate + " ");
-		}
-		result.append(" } ");
-		result.append(" { ");
+		result.append(" . ");
 		result.append(returnedType);
-		result.append(" } ");
+		result.append(" , ");
 		// Parameter
-		result.append(" { ");
 		for (String t : parametersType) {
 			result.append(t + " ");
 		}
-		result.append(" } ");
-		result.append(" { ");
+		result.append(" . ");
 		for (String identifier : identifiers) {
 			result.append(identifier + " ");
 		}
-		result.append(" } ");
+
 		String r = String.join(" ", StringUtils.splitByCharacterTypeCamelCase(result.toString()));
 		r = r.replace("_", " ").replaceAll("\\s+", " ").trim().toLowerCase();
 		return r.replace("{}", "{ }");

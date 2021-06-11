@@ -68,8 +68,8 @@ public class Utils {
 	}
 
 	public static void write(String filePath, String content) {
-		if (new File(filePath).exists())
-			return;
+//		if (new File(filePath).exists())
+//			(new File(filePath)).delete();
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
 			bw.write(content);
 			bw.close();

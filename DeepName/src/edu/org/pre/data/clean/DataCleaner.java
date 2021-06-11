@@ -4,7 +4,7 @@ import java.io.File;
 
 public class DataCleaner {
 //	public static String DATA = "";
-	public static String DATA = "";
+	public static String DATA = "Data";
 	public static int COUNTER = 0;
 	static StringBuffer FILES = new StringBuffer("");
 
@@ -19,7 +19,7 @@ public class DataCleaner {
 			if (!path.getName().endsWith(".java")) {
 //				path.delete();
 			} else {
-				FILES.append("\n" + path.getAbsolutePath().replace(DATA + File.separator + "repos" + File.separator, ""));
+				FILES.append("\n" + path.getPath());
 			}
 		} else {
 			File files[] = path.listFiles();
